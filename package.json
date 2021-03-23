@@ -1,0 +1,20 @@
+{
+  "name": "goit-js-hw-10-food-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yaroslava16/goit-js-hw-10-food-service.git"
+  },
+  "keywords": [],
+  "author": "Iaroslava Musiichuk <iaroslava1607@gmail.com> ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yaroslava16/goit-js-hw-10-food-service/issues"
+  },
+  "homepage": "https://github.com/Yaroslava16/goit-js-hw-10-food-service#readme"
+}
