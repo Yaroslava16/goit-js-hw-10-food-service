@@ -1,14 +1,10 @@
-import menuItemMarkupTpl from "../templates/menu-item-markup";
+import menuItemsMarkupTpl from "../templates/menu-item-markup";
 import menu from "./menu.json";
 
 const menuMarkup = document.querySelector(".js-menu");
-const cardsMenuMarkup = createCardsMenuMarkup("cards");
+const cardsMenuMarkup = menuItemsMarkupTpl(menu);
 
 menuMarkup.insertAdjacentHTML("beforeend", cardsMenuMarkup);
-
-function createCardsMenuMarkup(cards) {
-  return menu.map(menuItemMarkupTpl).join("");
-}
 
 const addIngredientsOfDish = (menu) => {
   return menu.map(({ ingredients }) => {
