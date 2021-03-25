@@ -34,6 +34,5 @@ function saveTheme() {
     localStorage.setItem("checked", "false");
   }
 }
-if (localStorage.getItem("checked") == "true") {
-  checkbox.setAttribute("checked", "checked");
-}
+// if (localStorage.getItem("checked") == "true") {
+//   checkbox.setAttribute("checked", "checked");
