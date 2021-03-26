@@ -3,6 +3,8 @@ import menu from "./menu.json";
 import { addIngredientsOfDish } from "../js/add-ingredients-of-the-dish";
 
 const menuMarkup = document.querySelector(".js-menu");
+const body = document.querySelector("body");
+console.log(body);
 const cardsMenuMarkup = menuItemsMarkupTpl(menu);
 
 menuMarkup.insertAdjacentHTML("beforeend", cardsMenuMarkup);
@@ -24,15 +26,21 @@ const checkbox = document.querySelector("#theme-switch-toggle");
 checkbox.addEventListener("change", changeTheme);
 
 function changeTheme() {
-  return document.body.classList.toggle(Theme.DARK);
-}
-
-function saveTheme() {
-  if (checkbox.checked) {
-    localStorage.setItem("checked", "true");
+  if (body.classList.conteins(Theme.DARK)) {
+    body.classList.remove(Theme.DARK);
+    body.classList.add(Theme.LIGHT);
+    localStorage.setItem("theme", Theme.LIGHT);
   } else {
-    localStorage.setItem("checked", "false");
+    body.classList.remove(Theme.LIGHT);
+    body.classList.add(Theme.DARK);
+    localStorage.setItem("theme", Theme.DARK);
   }
 }
-// if (localStorage.getItem("checked") == "true") {
-//   checkbox.setAttribute("checked", "checked");
+
+if (localStorage.getItem("theme")) {
+  body.classList.add(localStorage.getItem("theme"));
+}
+
+if (body.classList.contains("dark-theme")) {
+  checkBox.checked = true;
+}
