@@ -7,12 +7,15 @@ export const Theme = {
 
 export function changeTheme() {
   if (refs.body.classList.contains(Theme.DARK)) {
-    refs.body.classList.remove(Theme.DARK);
-    refs.body.classList.add(Theme.LIGHT);
+    changeClassBody(Theme.LIGHT, Theme.DARK);
     localStorage.setItem("theme", Theme.LIGHT);
   } else {
-    refs.body.classList.remove(Theme.LIGHT);
-    refs.body.classList.add(Theme.DARK);
+    changeClassBody(Theme.DARK, Theme.LIGHT);
     localStorage.setItem("theme", Theme.DARK);
   }
+}
+
+export function changeClassBody(classAdd, classRemove) {
+  refs.body.classList.remove(classRemove);
+  refs.body.classList.add(classAdd);
 }

@@ -2,7 +2,7 @@ import menu from "./menu.json";
 import menuItemsMarkupTpl from "../templates/menu-item-markup";
 import refs from "./refs";
 import { addIngredientsOfDish } from "../js/add-ingredients-of-the-dish";
-import { Theme, changeTheme } from "../js/change-theme";
+import { Theme, changeTheme, changeClassBody } from "../js/change-theme";
 
 const cardsMenuMarkup = menuItemsMarkupTpl(menu);
 
